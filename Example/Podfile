@@ -1,0 +1,6 @@
+use_frameworks!
+target 'SwiftPhysics2D_Tests' do
+  pod 'SwiftPhysics2D', :path => '../'
+  
+  
+end
