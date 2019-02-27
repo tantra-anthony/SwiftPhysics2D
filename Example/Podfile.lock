@@ -1,0 +1,16 @@
+PODS:
+  - SwiftPhysics2D (0.1.0)
+
+DEPENDENCIES:
+  - SwiftPhysics2D (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftPhysics2D:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftPhysics2D: f31e993edb601593f79ab2faaaa13044a282474c
+
+PODFILE CHECKSUM: e5822bcfa7af7ff569e4a9d9290602521f969109
+
+COCOAPODS: 1.5.3

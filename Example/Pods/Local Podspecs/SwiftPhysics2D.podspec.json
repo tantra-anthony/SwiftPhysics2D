@@ -1,0 +1,22 @@
+{
+  "name": "SwiftPhysics2D",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftPhysics2D.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/JTantra/SwiftPhysics2D",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "JTantra": "tantra.anthony@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/JTantra/SwiftPhysics2D.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SwiftPhysics2D/Classes/**/*"
+}

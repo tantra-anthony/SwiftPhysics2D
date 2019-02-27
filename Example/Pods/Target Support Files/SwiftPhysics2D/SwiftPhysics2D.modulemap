@@ -1,0 +1,6 @@
+framework module SwiftPhysics2D {
+  umbrella header "SwiftPhysics2D-umbrella.h"
+
+  export *
+  module * { export * }
+}
