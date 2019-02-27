@@ -19,19 +19,31 @@ import UIKit
  object and to get the positions and bounding boxes
  of the class. This simplifies future calculations.
  */
-public class RigidBody2D: UIImageView {
+open class RigidBody2D: UIImageView {
     var velocity: Vector2D = Vector2D(0.0, 0.0)
     var isImmovable: Bool = false
     
     /// initializes the RigidBody2D object
     /// with zero velocity and zero frames
-    init() {
+    public init() {
         self.velocity = Vector2D(0.0, 0.0)
         super.init(frame: CGRect.zero)
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    public func getVelocity() -> Vector2D {
+        return velocity
+    }
+    
+    public func setVelocity(_ forVelocity: Vector2D) {
+        velocity = forVelocity
+    }
+    
+    public func setImmovable(_ immovable: Bool) {
+        isImmovable = immovable
     }
     
     /// returns a boolean defining whether
@@ -41,7 +53,7 @@ public class RigidBody2D: UIImageView {
     /// - Parameters:
     ///     - rigidBody: the other RigidBody2D object
     /// - Returns: true if the rigidbodies intersect, false otherwise
-    func isIntersectingBoxToBoxWith(_ rigidBody: RigidBody2D) -> Bool {
+    public func isIntersectingBoxToBoxWith(_ rigidBody: RigidBody2D) -> Bool {
         return self.frame.intersects(rigidBody.frame)
     }
     
@@ -52,7 +64,7 @@ public class RigidBody2D: UIImageView {
     /// - Parameters:
     ///     - view: the other UIView object
     /// - Returns: true if the views intersect, false otherwise
-    func isIntersectingCircleToCircleWithView(_ view: UIView) -> Bool {
+    public func isIntersectingCircleToCircleWithView(_ view: UIView) -> Bool {
         return distanceBetween(self.center, view.center) <= (self.frame.width + view.frame.width) / 2.0
     }
     
@@ -63,7 +75,7 @@ public class RigidBody2D: UIImageView {
     /// - Parameters:
     ///     - view: the other RigidBody2D object
     /// - Returns: true if the rigidbodies intersect, false otherwise
-    func isIntersectingCircleToCircleWith(_ rigidBody: RigidBody2D) -> Bool {
+    public func isIntersectingCircleToCircleWith(_ rigidBody: RigidBody2D) -> Bool {
         return distanceBetween(self.center, rigidBody.center) <= (self.frame.width + rigidBody.frame.width) / 2.0
     }
     

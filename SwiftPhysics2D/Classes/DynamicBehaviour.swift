@@ -19,7 +19,7 @@ public protocol DynamicBehaviour {
     func onCollideEnter2D(collision: Collision2D)
 }
 
-extension DynamicBehaviour {
+public extension DynamicBehaviour {
     func update() {}
     func onCollideEnter2D(collision: Collision2D) { }
 }

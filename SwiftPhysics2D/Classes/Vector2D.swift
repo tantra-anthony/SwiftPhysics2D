@@ -19,9 +19,25 @@ public struct Vector2D {
     /// - Parameters:
     ///     - x: the x component of the vector
     ///     - y: the y component of the vector
-    init(_ x: CGFloat, _ y: CGFloat) {
+    public init(_ x: CGFloat, _ y: CGFloat) {
         self.x = x
         self.y = y
+    }
+    
+    public func getX() -> CGFloat {
+        return x
+    }
+    
+    mutating func setX(_ forX: CGFloat) {
+        x = forX
+    }
+    
+    public func getY() -> CGFloat {
+        return y
+    }
+    
+    mutating func setY(_ forY: CGFloat) {
+        y = forY
     }
     
     /// flips the sign of the x component

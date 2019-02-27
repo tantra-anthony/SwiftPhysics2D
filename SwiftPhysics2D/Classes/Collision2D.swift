@@ -24,7 +24,7 @@ public class Collision2D {
     ///     is involved in the collision
     ///     - otherRigidBody: the other RigidBody2D object
     ///     that is involved in the collision
-    init(rigidBody: RigidBody2D, otherRigidBody: RigidBody2D) {
+    public init(rigidBody: RigidBody2D, otherRigidBody: RigidBody2D) {
         self.rigidBody = rigidBody
         self.otherRigidBody = otherRigidBody
     }
@@ -40,7 +40,7 @@ public class Collision2D {
     /// gets the collision type of the two colliding
     /// objects
     /// - Returns: CollisionType enum case
-    func getCollisionType() -> CollisionTypes {
+    public func getCollisionType() -> CollisionTypes {
         if rigidBody.isImmovable && otherRigidBody.isImmovable {
             return .NONE
         } else if !rigidBody.isImmovable && !otherRigidBody.isImmovable {
@@ -50,7 +50,7 @@ public class Collision2D {
         }
     }
     
-    func getRigidBodyVelocityAfterCollision() -> Vector2D? {
+    public func getRigidBodyVelocityAfterCollision() -> Vector2D? {
         if getCollisionType() == .REFLECTION {
             if getIntersectingRect().maxX == otherRigidBody.frame.maxX || getIntersectingRect().minX == otherRigidBody.frame.minX {
                 // right or left reflection
